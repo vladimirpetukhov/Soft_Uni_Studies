@@ -1,0 +1,4 @@
+﻿  7.Sum Seconds.cpp
+c:\users\vlado\source\repos\3.simple conditional statements\7.sum seconds\7.sum seconds.cpp(30): warning C4477: 'printf' : format string '%s' requires an argument of type 'char *', but variadic argument 1 has type 'std::string'
+c:\users\vlado\source\repos\3.simple conditional statements\7.sum seconds\7.sum seconds.cpp(30): warning C4477: 'printf' : format string '%s' requires an argument of type 'char *', but variadic argument 2 has type 'std::string'
+  7.Sum Seconds.vcxproj -> C:\Users\Vlado\source\repos\3.Simple Conditional Statements\Debug\7.Sum Seconds.exe

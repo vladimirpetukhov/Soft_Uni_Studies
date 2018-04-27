@@ -1,0 +1,37 @@
+﻿  8.MetricConverter.cpp
+c:\users\vlado\source\repos\3.simple conditional statements\8.metricconverter\8.metricconverter.cpp(42): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.12.25827\include\utility(201): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+  c:\users\vlado\source\repos\3.simple conditional statements\8.metricconverter\8.metricconverter.cpp(35): note: see reference to function template instantiation 'std::pair<const _Kty,_Ty>::pair<const char(&)[3],int,0>(_Other1,_Other2 &&) noexcept(false)' being compiled
+          with
+          [
+              _Kty=std::string,
+              _Ty=float,
+              _Other1=const char (&)[3],
+              _Other2=int
+          ]
+  c:\users\vlado\source\repos\3.simple conditional statements\8.metricconverter\8.metricconverter.cpp(25): note: see reference to function template instantiation 'std::pair<const _Kty,_Ty>::pair<const char(&)[3],int,0>(_Other1,_Other2 &&) noexcept(false)' being compiled
+          with
+          [
+              _Kty=std::string,
+              _Ty=float,
+              _Other1=const char (&)[3],
+              _Other2=int
+          ]
+c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.12.25827\include\utility(201): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  c:\users\vlado\source\repos\3.simple conditional statements\8.metricconverter\8.metricconverter.cpp(35): note: see reference to function template instantiation 'std::pair<const _Kty,_Ty>::pair<const char(&)[3],double,0>(_Other1,_Other2 &&) noexcept(false)' being compiled
+          with
+          [
+              _Kty=std::string,
+              _Ty=float,
+              _Other1=const char (&)[3],
+              _Other2=double
+          ]
+  c:\users\vlado\source\repos\3.simple conditional statements\8.metricconverter\8.metricconverter.cpp(25): note: see reference to function template instantiation 'std::pair<const _Kty,_Ty>::pair<const char(&)[3],double,0>(_Other1,_Other2 &&) noexcept(false)' being compiled
+          with
+          [
+              _Kty=std::string,
+              _Ty=float,
+              _Other1=const char (&)[3],
+              _Other2=double
+          ]
+LINK : fatal error LNK1168: cannot open C:\Users\Vlado\source\repos\3.Simple Conditional Statements\Debug\8.MetricConverter.exe for writing

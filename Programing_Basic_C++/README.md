@@ -7,8 +7,7 @@
 
                                                  About the course
 
-The C # Advanced course examines the .NET platform, as well as working with the C # language above the startup. This includes coding skills, solving problem solving skills, familiarizing with standard tools for working (.NET Framework), word processing tools, linear and tree collections, and working with files and directories. Particular attention is paid to the functional programming paradigm as well as to the basic tool bundling it - LINQ to process data streams. The course will also deal with asynchronous programming, and throughout the course of the course the students will be divided into teams that will have to make a practical project.
----
+The "Programming Basics" course provides the initial programming skills required for all of the technological majors at the University of Software. This includes basic codeing skills, working with development environment (IDE), using variables and data, operators and expressions, console handling (reading input and output printing), using the conditional constructions (if, if-else) and cycles (for, while, do-while).---
 
 
 ## Exercises.

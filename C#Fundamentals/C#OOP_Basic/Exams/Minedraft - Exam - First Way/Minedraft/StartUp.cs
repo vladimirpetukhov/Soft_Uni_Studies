@@ -1,10 +1,12 @@
 ﻿namespace Minedraft
 {
+    using Commands;
     public class StartUp
     {
         public static void Main()
         {
-            Engine engine = new Engine();
+            CommandInterpreter command = new CommandInterpreter();
+            Engine engine = new Engine(command);
             engine.Run();
         }
     }

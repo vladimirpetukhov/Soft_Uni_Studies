@@ -8,6 +8,7 @@ public class DraftManager
     private string mode;
     private double totalStoredEnergy;
     private double totalMinedOre;
+    private HarvesterFactory factory;
     private Dictionary<string, Harvester> harvesters;
     private Dictionary<string, Provider> providers;
     private Dictionary<string, double> energyRequirementMode;
@@ -15,6 +16,7 @@ public class DraftManager
 
     public DraftManager()
     {
+        this.factory = new HarvesterFactory();
         this.harvesters = new Dictionary<string, Harvester>();
         this.providers = new Dictionary<string, Provider>();
         this.mode = "Full";
@@ -35,10 +37,10 @@ public class DraftManager
 
         try
         {
-            var harvester = HarvesterFactory.CreateHarvester(arguments);
-            this.harvesters[harvester.Id] = harvester;
+            factory.CreateHarvester(arguments);
+            // this.harvesters[harvester.Id] = harvester;
 
-            return $"Successfully registered {harvester.GetType()} - {harvester.Id}";
+            return $"Successfully registered";// {harvester.GetType()} - {harvester.Id}";
         }
         catch (Exception e)
         {

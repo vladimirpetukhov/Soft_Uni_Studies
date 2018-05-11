@@ -42,8 +42,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commands\Command.cs" />
+    <Compile Include="Commands\CommandInterpreter.cs" />
+    <Compile Include="Commands\ICommand.cs" />
+    <Compile Include="Commands\RegisterHarvester.cs" />
     <Compile Include="Core\DraftManager.cs" />
     <Compile Include="Core\Engine.cs" />
+    <Compile Include="Core\IRepository.cs" />
+    <Compile Include="Core\Repository.cs" />
     <Compile Include="Entities\Harvesters\HammerHarvester.cs" />
     <Compile Include="Entities\Harvesters\Harvester.cs" />
     <Compile Include="Entities\Harvesters\SonicHarvester.cs" />

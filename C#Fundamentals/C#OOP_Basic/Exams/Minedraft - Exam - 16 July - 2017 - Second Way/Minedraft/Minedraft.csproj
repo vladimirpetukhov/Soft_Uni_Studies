@@ -42,18 +42,38 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contracts\ICommand.cs" />
+    <Compile Include="Contracts\IExecute.cs" />
+    <Compile Include="Contracts\ICommandInterpreter.cs" />
+    <Compile Include="Contracts\IFactory.cs" />
+    <Compile Include="Contracts\IHarvester.cs" />
+    <Compile Include="Contracts\IProvider.cs" />
+    <Compile Include="Contracts\IReader.cs" />
+    <Compile Include="Contracts\IRepository.cs" />
+    <Compile Include="Contracts\IUnit.cs" />
+    <Compile Include="Contracts\IWriter.cs" />
+    <Compile Include="Core\CommandInterpreter.cs" />
+    <Compile Include="Core\Commands\Command.cs" />
+    <Compile Include="Core\Commands\RegisterHarvesterCommand.cs" />
+    <Compile Include="Core\Commands\RegisterProviderCommand.cs" />
+    <Compile Include="Core\Data\Repository.cs" />
+    <Compile Include="Core\Data\Writer.cs" />
+    <Compile Include="Core\Data\Reader.cs" />
     <Compile Include="Core\DraftManager.cs" />
     <Compile Include="Core\Engine.cs" />
+    <Compile Include="Core\UnitsAttributes\HammerHarvesterAttribute.cs" />
+    <Compile Include="Core\UnitsAttributes\SonicHarvesterAttribute.cs" />
     <Compile Include="Entities\Harvester\HammerHarvester.cs" />
     <Compile Include="Entities\Harvester\Harvester.cs" />
     <Compile Include="Entities\Harvester\SonicHarvester.cs" />
-    <Compile Include="Entities\IdMiner.cs" />
+    <Compile Include="Entities\UnitsID.cs" />
     <Compile Include="Entities\Providers\PressureProvider.cs" />
     <Compile Include="Entities\Providers\Provider.cs" />
     <Compile Include="Entities\Providers\SolarProvider.cs" />
     <Compile Include="Factories\HarvesterFactory.cs" />
     <Compile Include="Factories\ProviderFactory.cs" />
-    <Compile Include="StartUp.cs" />
+    <Compile Include="AppEntryPoint.cs" />
+    <Compile Include="Factories\UnitFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

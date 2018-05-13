@@ -1,23 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
-
-public static class ProviderFactory
+using System.Reflection;
+using System.Linq;
+public class ProviderFactory:IFactory
 {
-    public static Provider CreateProvider(List<string> providerArgs)
-    {
-        var providerType = providerArgs[0];
-        var providerId = providerArgs[1];
-        var providerEnergyOutput = double.Parse(providerArgs[2]);
+    private const string Suffix ="Provider";
 
-        switch (providerType)
-        {
-            case "Solar":
-                return new SolarProvider(providerId, providerEnergyOutput);
-            case "Pressure":
-                return new PressureProvider(providerId, providerEnergyOutput);
-            default:
-                throw new ArgumentException();
-        }
+    public IUnit CreateUnit(IList<string> arguments)
+    {
+        var providerType = arguments[0];
+        var fullName = providerType + Suffix;
+
+        var providerId = arguments[1];
+        var providerEnergyOutput = double.Parse(arguments[2]);
+
+        Type provider = Assembly.GetExecutingAssembly()
+            .GetTypes()
+            .FirstOrDefault(t => t.Name
+            .Equals(fullName, StringComparison.OrdinalIgnoreCase));
+
+        object[] args = new object[] {providerId,providerEnergyOutput};
+
+        IProvider activatedProvider =(IProvider) Activator.CreateInstance(provider, args);
+
+        return null;
     }
 }
 

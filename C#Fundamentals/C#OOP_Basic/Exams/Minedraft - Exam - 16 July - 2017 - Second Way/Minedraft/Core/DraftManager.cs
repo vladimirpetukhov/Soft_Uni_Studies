@@ -20,43 +20,43 @@ public class DraftManager
         this.totalMinedOre = 0;
     }
 
-    public string RegisterHarvester(List<string> arguments)
-    {
-        string msg = string.Empty;
-        try
-        {
-            var harvesterType = arguments[0];
-            Harvester harvester = HarvesterFactory.CreateHarvester(arguments);
-            this.harvesters[harvester.Id] = harvester;
+    //public string RegisterHarvester(List<string> arguments)
+    //{
+    //    //string msg = string.Empty;
+    //    //try
+    //    //{
+    //    //    var harvesterType = arguments[0];
+    //    //    Harvester harvester = HarvesterFactory.CreateHarvester(arguments);
+    //    //    this.harvesters[harvester.Id] = harvester;
 
-            msg = $"Successfully registered {harvesterType} Harvester - {harvester.Id}";
-        }
-        catch (ArgumentException ex)
-        {
-            msg = ex.Message;
-        }
+    //    //    msg = $"Successfully registered {harvesterType} Harvester - {harvester.Id}";
+    //    //}
+    //    //catch (ArgumentException ex)
+    //    //{
+    //    //    msg = ex.Message;
+    //    //}
 
-        return msg;
-    }
+    //    //return msg;
+    //}
 
-    public string RegisterProvider(List<string> harvesterArgs)
-    {
-        string msg = string.Empty;
-        try
-        {
-            var providerType = harvesterArgs[0];
-            Provider provider = ProviderFactory.CreateProvider(harvesterArgs);
-            this.providers[provider.Id] = provider;
+    //public string RegisterProvider(List<string> harvesterArgs)
+    //{
+    //    string msg = string.Empty;
+    //    try
+    //    {
+    //        var providerType = harvesterArgs[0];
+    //        Provider provider = ProviderFactory.CreateProvider(harvesterArgs);
+    //        this.providers[provider.Id] = provider;
 
-            msg = $"Successfully registered {providerType} Provider - {provider.Id}";
-        }
-        catch (ArgumentException ex)
-        {
-            msg = ex.Message;
-        }
+    //        msg = $"Successfully registered {providerType} Provider - {provider.Id}";
+    //    }
+    //    catch (ArgumentException ex)
+    //    {
+    //        msg = ex.Message;
+    //    }
 
-        return msg;
-    }
+    //    return msg;
+    //}
     
     public string Day()
     {

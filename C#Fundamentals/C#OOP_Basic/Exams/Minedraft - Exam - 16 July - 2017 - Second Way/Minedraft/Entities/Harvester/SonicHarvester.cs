@@ -1,5 +1,7 @@
-﻿public class SonicHarvester : Harvester
+﻿using System;
+public class SonicHarvester : Harvester
 {
+    [SonicHarvester]
     private int sonicFactor;
 
     public SonicHarvester(string id, double oreOutput, double energyRequirement, int sonicFactor)

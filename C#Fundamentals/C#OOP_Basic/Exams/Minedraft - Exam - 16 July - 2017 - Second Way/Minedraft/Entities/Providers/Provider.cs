@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
 
-public abstract class Provider : IdMiner
+public abstract class Provider : UnitsID,IProvider
 {
     private double energyOutput;
 

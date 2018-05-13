@@ -1,8 +1,8 @@
-﻿public abstract class IdMiner
+﻿public abstract class UnitsID:IUnit
 {
     private string id;
 
-    protected IdMiner(string id)
+    protected UnitsID(string id)
     {
         this.Id = id;
     }

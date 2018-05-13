@@ -1,10 +1,21 @@
 ﻿using System;
 using System.Text;
 
-public abstract class Harvester : IdMiner
+public abstract class Harvester :UnitsID,IHarvester
 {
+    [SonicHarvester]
+    [HammerHarvester]
     private double oreOutput;
+
+    [SonicHarvester]
+    [HammerHarvester]
     private double energyRequirement;
+
+    protected Harvester(double sonicFactor, string id, double oreOutput, double energyRequirement) 
+        :this(id, oreOutput,energyRequirement)
+    {
+
+    }
 
     protected Harvester(string id, double oreOutput, double energyRequirement)
         : base(id)

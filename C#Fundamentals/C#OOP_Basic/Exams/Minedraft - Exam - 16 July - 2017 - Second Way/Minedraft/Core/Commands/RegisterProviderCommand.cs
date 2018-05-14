@@ -2,9 +2,10 @@
 using System;
 public class RegisterProviderCommand : Command
 {
-    protected RegisterProviderCommand(IList<string> arguments, IRepository repository) 
+    public RegisterProviderCommand(IList<string> arguments, IRepository repository) 
         : base(arguments, repository)
     {
+        this.Factory = new ProviderFactory();
     }
 
     public override string Execute()

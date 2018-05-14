@@ -53,9 +53,13 @@
     <Compile Include="Contracts\IUnit.cs" />
     <Compile Include="Contracts\IWriter.cs" />
     <Compile Include="Core\CommandInterpreter.cs" />
+    <Compile Include="Core\Commands\CheckCommand.cs" />
     <Compile Include="Core\Commands\Command.cs" />
+    <Compile Include="Core\Commands\DayCommand.cs" />
+    <Compile Include="Core\Commands\ModeCommand.cs" />
     <Compile Include="Core\Commands\RegisterHarvesterCommand.cs" />
     <Compile Include="Core\Commands\RegisterProviderCommand.cs" />
+    <Compile Include="Core\Commands\ShutdownCommand.cs" />
     <Compile Include="Core\Data\Repository.cs" />
     <Compile Include="Core\Data\Writer.cs" />
     <Compile Include="Core\Data\Reader.cs" />

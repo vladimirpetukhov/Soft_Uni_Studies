@@ -18,13 +18,9 @@ public class CommandInterpreter : ICommandInterpreter
             .GetTypes()
             .FirstOrDefault(t => t.Name
             .Equals(commandFullName, StringComparison.OrdinalIgnoreCase));
-
+        
         object[] args = new object[] {commandParameters,repository};
-
-        if (commandParameters.Count == 1)
-        {
-            args = null;
-        }
+        
 
         var instance = Activator.CreateInstance(commandType, args);
 

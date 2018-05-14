@@ -31,10 +31,18 @@ public class HarvesterFactory : UnitFactory
             givenArgs= new object[] { harvesterId, harvesterOreOutput, harvesterEnergyRequirement,sonicFactor };
         }
 
-        IHarvester getHarvester =(IHarvester) Activator.CreateInstance(type, givenArgs);
+        try
+        {
+            IHarvester getHarvester = (IHarvester)Activator.CreateInstance(type, givenArgs);
+            return getHarvester;
+        }
+        catch(TargetInvocationException e)
+        {
+            throw e.InnerException;
+        }
 
         
-        return getHarvester ;
+        
     }
 
 

@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Reflection;
 using System.Linq;
-public class ProviderFactory:IFactory
+public class ProviderFactory : IFactory
 {
-    private const string Suffix ="Provider";
+    private const string Suffix = "Provider";
 
     public IUnit CreateUnit(IList<string> arguments)
     {
@@ -19,11 +19,17 @@ public class ProviderFactory:IFactory
             .FirstOrDefault(t => t.Name
             .Equals(fullName, StringComparison.OrdinalIgnoreCase));
 
-        object[] args = new object[] {providerId,providerEnergyOutput};
+        object[] args = new object[] { providerId, providerEnergyOutput };
 
-        IProvider activatedProvider =(IProvider) Activator.CreateInstance(provider, args);
-
-        return null;
+        try
+        {
+            IProvider activatedProvider = (IProvider)Activator.CreateInstance(provider, args);
+            return activatedProvider;
+        }
+        catch(TargetInvocationException e)
+        {
+            throw e.InnerException;
+        }
     }
 }
 

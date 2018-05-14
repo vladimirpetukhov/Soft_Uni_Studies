@@ -58,40 +58,40 @@ public class DraftManager
     //    return msg;
     //}
     
-    public string Day()
-    {
-        double dayEnergy = 0;
-        double dayOre = 0;
-        double harvestNeededEnergyForDay = 0;
+    //public string Day()
+    //{
+    //    //double dayEnergy = 0;
+    //    //double dayOre = 0;
+    //    //double harvestNeededEnergyForDay = 0;
 
-        dayEnergy = providers.Sum(v => v.Value.EnergyOutput);
-        totalStoredEnergy += dayEnergy;
+    //    //dayEnergy = providers.Sum(v => v.Value.EnergyOutput);
+    //    //totalStoredEnergy += dayEnergy;
         
-        harvestNeededEnergyForDay += harvesters.Sum(h => h.Value.EnergyRequirement);
+    //    //harvestNeededEnergyForDay += harvesters.Sum(h => h.Value.EnergyRequirement);
 
-        if (totalStoredEnergy >= harvestNeededEnergyForDay)
-        {
-            if (mode == "Full")
-            {
-                dayOre += harvesters.Values.Sum(h => h.OreOutput);
-                totalStoredEnergy -= harvestNeededEnergyForDay;
-            }
-            else if (mode == "Half")
-            {
-                dayOre += harvesters.Values.Sum(h => (h.OreOutput * 50) / 100);
-                totalStoredEnergy -= (harvestNeededEnergyForDay * 60) / 100;
-            }
+    //    //if (totalStoredEnergy >= harvestNeededEnergyForDay)
+    //    //{
+    //    //    if (mode == "Full")
+    //    //    {
+    //    //        dayOre += harvesters.Values.Sum(h => h.OreOutput);
+    //    //        totalStoredEnergy -= harvestNeededEnergyForDay;
+    //    //    }
+    //    //    else if (mode == "Half")
+    //    //    {
+    //    //        dayOre += harvesters.Values.Sum(h => (h.OreOutput * 50) / 100);
+    //    //        totalStoredEnergy -= (harvestNeededEnergyForDay * 60) / 100;
+    //    //    }
 
-            totalMinedOre += dayOre;
-        }
+    //    //    totalMinedOre += dayOre;
+    //    //}
 
-        var sb = new StringBuilder();
-        sb.AppendLine($"A day has passed.");
-        sb.AppendLine($"Energy Provided: {dayEnergy}");
-        sb.AppendLine($"Plumbus Ore Mined: {dayOre}");
+    //    //var sb = new StringBuilder();
+    //    //sb.AppendLine($"A day has passed.");
+    //    //sb.AppendLine($"Energy Provided: {dayEnergy}");
+    //    //sb.AppendLine($"Plumbus Ore Mined: {dayOre}");
 
-        return sb.ToString().Trim();
-    }
+    //    //return sb.ToString().Trim();
+    //}
     public string Mode(List<string> arguments)
     {
         string modeToChange = arguments[0];

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 
 public class Engine
 {
@@ -35,9 +36,16 @@ public class Engine
         {
             string inputCommand = reader.ReadInput();
             var commandParameters = this.ParseInput(inputCommand);
-            string result = commandInterpreter.InterpredCommand(commandParameters,repository);
-            string gatherOutput=writer.AppendToGatherOutput(result);
-            writer.WriteGatherOutput(gatherOutput);
+
+            string result = commandInterpreter.InterpredCommand(commandParameters, repository);
+
+            writer.WriteGatherOutput(result);
+
+            if (inputCommand == "Shutdown")
+            {
+                Environment.Exit(0);
+            }
+
         }
 
     }

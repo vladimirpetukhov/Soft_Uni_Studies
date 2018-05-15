@@ -4,6 +4,6 @@ using System.Linq;
 
 public interface ICommandInterpreter
 {
-    string InterpredCommand(IList<string> arguments,IRepository repository);
+    string InterpredCommand(IList<string> arguments,IServiceProvider serviceProvider);
 }
 

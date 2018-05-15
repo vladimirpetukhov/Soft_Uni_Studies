@@ -2,9 +2,11 @@
 
 public abstract class Command : ICommand
 {
-    private IList<string> arguments;
-    private IRepository repository;
 
+    private IList<string> arguments;
+    [InjectAttributes]
+    private IRepository repository;
+    [InjectAttributes]
     private IFactory factory;
 
     protected Command(IList<string> arguments, IRepository repository)

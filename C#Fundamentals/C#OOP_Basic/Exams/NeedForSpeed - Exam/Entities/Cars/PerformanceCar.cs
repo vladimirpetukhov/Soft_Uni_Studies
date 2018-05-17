@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-
+using NeedForSpeed.Core.Attributes;
 public class PerformanceCar : Car
 {
+    [Car]
+    private List<string> addOns;
     public PerformanceCar(string brand, string model, int yearOfProduction, int horsepower, int acceleration, int suspension, int durability)
         : base(brand, model, yearOfProduction, horsepower, acceleration, suspension, durability)
     {
@@ -12,7 +14,9 @@ public class PerformanceCar : Car
         this.Suspension -= suspension * 25 / 100;
     }
 
-    public List<string> AddOns { get; }
+    public List<string> AddOns { get { return this.addOns; }
+    private set { this.addOns = value; }
+    }
 
     public override string ToString()
     {

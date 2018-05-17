@@ -32,6 +32,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=2.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.DependencyInjection.2.0.0\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.DependencyInjection.Abstractions.2.0.0\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -42,8 +48,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commands\CheckCommand.cs" />
+    <Compile Include="Commands\Command.cs" />
+    <Compile Include="Commands\OpenCommand.cs" />
+    <Compile Include="Commands\ParkCommand.cs" />
+    <Compile Include="Commands\ParticipateCommand.cs" />
+    <Compile Include="Commands\RegisterCommand.cs" />
+    <Compile Include="Commands\ReturnCommand.cs" />
+    <Compile Include="Commands\StartCommand.cs" />
+    <Compile Include="Commands\TuneCommand.cs" />
+    <Compile Include="Commands\UnparkCommand.cs" />
+    <Compile Include="Core\Attributes\CarAttribute.cs" />
+    <Compile Include="Core\BaseManager.cs" />
     <Compile Include="Core\CarManager.cs" />
+    <Compile Include="Core\CommandInterpreter.cs" />
     <Compile Include="Core\Engine.cs" />
+    <Compile Include="Core\Extensions\ParametersGatherer.cs" />
+    <Compile Include="Core\IO\ConsoleReader.cs" />
+    <Compile Include="Core\IO\ConsoleWrite.cs" />
     <Compile Include="Entities\Cars\Car.cs" />
     <Compile Include="Entities\Cars\PerformanceCar.cs" />
     <Compile Include="Entities\Cars\ShowCar.cs" />
@@ -56,13 +78,25 @@
     <Compile Include="Entities\Races\TimeLimitRace.cs" />
     <Compile Include="Factories\CarFactory.cs" />
     <Compile Include="Factories\RaceFactory.cs" />
-    <Compile Include="Interfaces\Command.cs" />
-    <Compile Include="Interfaces\ICommand.cs" />
+    <Compile Include="Interfaces\CommandBox\Command.cs" />
+    <Compile Include="Interfaces\CommandBox\IExecute.cs" />
+    <Compile Include="Interfaces\CommandBox\IReturnable.cs" />
+    <Compile Include="Interfaces\ICar.cs" />
+    <Compile Include="Interfaces\CommandBox\ICommand.cs" />
+    <Compile Include="Interfaces\ICarFactory.cs" />
+    <Compile Include="Interfaces\ICarManager.cs" />
+    <Compile Include="Interfaces\ICommandInterpreter.cs" />
+    <Compile Include="Interfaces\IGarage.cs" />
+    <Compile Include="Interfaces\IRaceFactory.cs" />
+    <Compile Include="Interfaces\IO\IReader.cs" />
+    <Compile Include="Interfaces\IO\IWriter.cs" />
+    <Compile Include="Interfaces\IRace.cs" />
     <Compile Include="StartUp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

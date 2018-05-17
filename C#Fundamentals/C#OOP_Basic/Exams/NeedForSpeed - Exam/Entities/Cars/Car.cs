@@ -1,8 +1,8 @@
 ﻿using System.Text;
-
-public abstract class Car
+using NeedForSpeed.Interfaces;
+public  class Car:ICar
 {
-    protected Car(string brand, string model, int yearOfProduction, int horsepower, int acceleration, int suspension, int durability)
+    public Car(string brand, string model, int yearOfProduction, int horsepower, int acceleration, int suspension, int durability)
     {
         this.Brand = brand;
         this.Model = model;
@@ -11,6 +11,10 @@ public abstract class Car
         this.Acceleration = acceleration;
         this.Suspension = suspension;
         this.Durability = durability;
+    }
+
+    public Car()
+    {
     }
 
     public string Brand { get; private set; }

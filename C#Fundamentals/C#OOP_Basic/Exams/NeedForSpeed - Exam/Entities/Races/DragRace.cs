@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using NeedForSpeed.Interfaces;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
@@ -8,7 +9,7 @@ public class DragRace : Race
     {
     }
 
-    public List<Car> GetWiners()
+    public List<ICar> GetWiners()
     {
         var winers = this.Participants.Values
                            .OrderByDescending(c => c.GetEnginePerformance())

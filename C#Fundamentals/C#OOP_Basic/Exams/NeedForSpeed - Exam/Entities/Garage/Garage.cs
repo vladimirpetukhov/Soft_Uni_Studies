@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
-
-public class Garage
+using NeedForSpeed.Interfaces;
+public class Garage:IGarage
 {
     public Garage()
     {
-        this.ParkedCars = new Dictionary<int, Car>();
+        this.ParkedCars = new Dictionary<int, ICar>();
     }
 
-    public IDictionary<int, Car> ParkedCars { get; protected set; }
+    public IDictionary<int, ICar> ParkedCars { get; protected set; }
 }
 

@@ -1,20 +1,30 @@
 ﻿using System;
-
-public static class RaceFactory
+using System.Collections.Generic;
+using NeedForSpeed.Interfaces;
+using System.Reflection;
+using System.Linq;
+public  class RaceFactory:IRaceFactory
 {
-    public static Race CreateRace(string type, int length, string route, int prizePool)
+    private const string SuffixRace ="Race";
+    public  IRace CreateRace(IList<string> arguments)
     {
-        switch (type)
-        {
-            case "Casual":
-                return new CasualRace(length, route, prizePool);
-            case "Drag":
-                return new DragRace(length, route, prizePool);
-            case "Drift":
-                return new DriftRace(length, route, prizePool);
-            default:
-                throw new ArgumentException();
-        }
+        string type = arguments[0];
+        int length = int.Parse(arguments[1]);
+        string route = arguments[2];
+        int prizePool = int.Parse(arguments[3]);
+
+        string raceType = type + SuffixRace;
+
+        Type typeOfRace = Assembly.GetExecutingAssembly()
+            .GetTypes()
+            .FirstOrDefault(t => t.Name
+            .Equals(raceType, StringComparison.OrdinalIgnoreCase));
+
+        object[] args = new object[] { length, route, prizePool };
+
+        IRace race = (IRace)Activator.CreateInstance(typeOfRace, args);
+        
+        return race;
     }
 }
 

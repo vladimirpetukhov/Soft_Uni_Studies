@@ -4,7 +4,7 @@ using System.Linq;
 using NeedForSpeed.Core.Attributes;
 public class PerformanceCar : Car
 {
-    [Car]
+    
     private List<string> addOns;
     public PerformanceCar(string brand, string model, int yearOfProduction, int horsepower, int acceleration, int suspension, int durability)
         : base(brand, model, yearOfProduction, horsepower, acceleration, suspension, durability)

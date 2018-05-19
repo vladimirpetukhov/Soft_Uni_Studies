@@ -13,6 +13,8 @@ public class CheckCommand : Command
 
     public override string Execute()
     {
+       
+
         var id = int.Parse(Arguments[0]);
         return carManager.Cars[id].ToString().Trim();
         

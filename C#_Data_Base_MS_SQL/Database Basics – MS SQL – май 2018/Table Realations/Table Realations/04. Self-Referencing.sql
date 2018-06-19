@@ -1,0 +1,10 @@
+CREATE TABLE Teachers
+(
+	TeacherID INT PRIMARY KEY NOT NULL,
+	[Name] NVARCHAR(30) NOT NULL,
+	ManagerID INT
+)
+
+ALTER TABLE Teachers
+ADD CONSTRAINT FK_ManagerID_TeacherID 
+	FOREIGN KEY (ManagerID) REFERENCES Teachers(TeacherID)

@@ -1,0 +1,63 @@
+CREATE TABLE Clients(
+Id INT PRIMARY KEY IDENTITY,
+FirstName NVARCHAR(50) NOT NULL,
+LastName NVARCHAR(50) NOT NULL,
+Gender CHAR(1) CHECK(Gender = 'm' or Gender = 'f'),
+BirthDate DATE,
+CreditCard NVARCHAR(30) NOT NULL,
+CardValidity DATE,
+Email NVARCHAR(50) NOT NULL
+
+)
+
+CREATE TABLE Towns(
+Id INT PRIMARY KEY IDENTITY,
+[Name] NVARCHAR(50) NOT NULL,
+)
+
+CREATE TABLE Offices(
+Id INT PRIMARY KEY IDENTITY,
+[Name] NVARCHAR(40),
+ParkingPlaces INT,
+TownId INT FOREIGN KEY REFERENCES Towns(Id) NOT NULL,
+)
+
+CREATE TABLE Models(
+Id	INT	PRIMARY KEY IDENTITY,
+Manufacturer NVARCHAR(50) NOT NULL,
+Model NVARCHAR(50) NOT NULL,
+ProductionYear	DATE,	
+Seats	INT,
+Class	NVARCHAR(10),	
+Consumption	DECIMAL(14,2)
+)
+
+CREATE TABLE Vehicles(
+Id	INT PRIMARY KEY IDENTITY,
+ModelId	INT FOREIGN KEY REFERENCES Models(Id) NOT NULL,
+OfficeId INT FOREIGN KEY REFERENCES Offices(Id) NOT NULL,
+Mileage	INT	
+)
+CREATE TABLE Orders
+(
+	Id	INT PRIMARY KEY Identity NOT NULL,
+ClientId INT NOT NULL,
+TownId	INT NOT NULL,
+VehicleId INT NOT NULL,
+CollectionDate	DateTime NOT NULL,
+CollectionOfficeId	INT NOT NULL,--FK OFICES
+ReturnDate	DateTime,
+ReturnOfficeId	INT ,
+Bill	Decimal(14,2),
+TotalMileage	INT
+CONSTRAINT FK_ClientID_Clients FOREIGN KEY (ClientId)
+REFERENCES Clients(Id),
+CONSTRAINT FK_TownID_Towns FOREIGN KEY (TownId)
+REFERENCES Towns(Id),
+CONSTRAINT FK_VehicleId_Vecihcles FOREIGN KEY (VehicleId)
+REFERENCES Vehicles(Id),
+CONSTRAINT FK_CollectionOffID_Offieces FOREIGN KEY (CollectionOfficeId)
+REFERENCES Offices(Id),
+CONSTRAINT FK_ReturnOfficeId_Offices FOREIGN KEY (ReturnOfficeId)
+REFERENCES Offices(Id)
+)

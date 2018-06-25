@@ -3,7 +3,7 @@
 
 ---
 
-[logo]: http://innovationstarterbox.bg/wp-content/uploads/2016/05/Softuni_logo_trasparent.png "Logo Title Text 2"
+[logo]: https://github.com/vladimirpetukhov/Soft_Uni_Studies/blob/master/C%23_Data_Base_MS_SQL/Database%20Basics%20%E2%80%93%20MS%20SQL%20%E2%80%93%20%D0%BC%D0%B0%D0%B9%202018/Serificate_MSSQL.png "Logo Title Text 2"
 
 ---
 

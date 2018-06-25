@@ -1,0 +1,7 @@
+
+BEGIN TRAN
+DELETE FROM Reports
+WHERE StatusId=4
+
+
+ROLLBACK

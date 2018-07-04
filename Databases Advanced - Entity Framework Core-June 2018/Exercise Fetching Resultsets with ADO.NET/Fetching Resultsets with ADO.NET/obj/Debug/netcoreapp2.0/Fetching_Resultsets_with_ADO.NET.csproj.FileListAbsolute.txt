@@ -1,0 +1,11 @@
+C:\Users\Vlado\source\repos\Fetching Resultsets with ADO.NET\Fetching Resultsets with ADO.NET\bin\Debug\netcoreapp2.0\Fetching_Resultsets_with_ADO.NET.deps.json
+C:\Users\Vlado\source\repos\Fetching Resultsets with ADO.NET\Fetching Resultsets with ADO.NET\bin\Debug\netcoreapp2.0\Fetching_Resultsets_with_ADO.NET.runtimeconfig.json
+C:\Users\Vlado\source\repos\Fetching Resultsets with ADO.NET\Fetching Resultsets with ADO.NET\bin\Debug\netcoreapp2.0\Fetching_Resultsets_with_ADO.NET.runtimeconfig.dev.json
+C:\Users\Vlado\source\repos\Fetching Resultsets with ADO.NET\Fetching Resultsets with ADO.NET\bin\Debug\netcoreapp2.0\Fetching_Resultsets_with_ADO.NET.dll
+C:\Users\Vlado\source\repos\Fetching Resultsets with ADO.NET\Fetching Resultsets with ADO.NET\bin\Debug\netcoreapp2.0\Fetching_Resultsets_with_ADO.NET.pdb
+C:\Users\Vlado\source\repos\Fetching Resultsets with ADO.NET\Fetching Resultsets with ADO.NET\obj\Debug\netcoreapp2.0\Fetching_Resultsets_with_ADO.NET.csprojAssemblyReference.cache
+C:\Users\Vlado\source\repos\Fetching Resultsets with ADO.NET\Fetching Resultsets with ADO.NET\obj\Debug\netcoreapp2.0\Fetching_Resultsets_with_ADO.NET.csproj.CoreCompileInputs.cache
+C:\Users\Vlado\source\repos\Fetching Resultsets with ADO.NET\Fetching Resultsets with ADO.NET\obj\Debug\netcoreapp2.0\Fetching_Resultsets_with_ADO.NET.AssemblyInfoInputs.cache
+C:\Users\Vlado\source\repos\Fetching Resultsets with ADO.NET\Fetching Resultsets with ADO.NET\obj\Debug\netcoreapp2.0\Fetching_Resultsets_with_ADO.NET.AssemblyInfo.cs
+C:\Users\Vlado\source\repos\Fetching Resultsets with ADO.NET\Fetching Resultsets with ADO.NET\obj\Debug\netcoreapp2.0\Fetching_Resultsets_with_ADO.NET.dll
+C:\Users\Vlado\source\repos\Fetching Resultsets with ADO.NET\Fetching Resultsets with ADO.NET\obj\Debug\netcoreapp2.0\Fetching_Resultsets_with_ADO.NET.pdb

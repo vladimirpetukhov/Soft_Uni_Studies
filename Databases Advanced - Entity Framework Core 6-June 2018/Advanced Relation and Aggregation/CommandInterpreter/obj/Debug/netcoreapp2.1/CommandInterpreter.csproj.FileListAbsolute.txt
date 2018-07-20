@@ -1,0 +1,14 @@
+C:\Users\Vlado\source\repos\Advanced Relations\CommandInterpreter\bin\Debug\netcoreapp2.1\CommandInterpreter.deps.json
+C:\Users\Vlado\source\repos\Advanced Relations\CommandInterpreter\bin\Debug\netcoreapp2.1\CommandInterpreter.dll
+C:\Users\Vlado\source\repos\Advanced Relations\CommandInterpreter\bin\Debug\netcoreapp2.1\CommandInterpreter.pdb
+C:\Users\Vlado\source\repos\Advanced Relations\CommandInterpreter\bin\Debug\netcoreapp2.1\P01_BillsPaymentSystem.Data.dll
+C:\Users\Vlado\source\repos\Advanced Relations\CommandInterpreter\bin\Debug\netcoreapp2.1\P01_BillsPaymentSystem.Data.Models.dll
+C:\Users\Vlado\source\repos\Advanced Relations\CommandInterpreter\bin\Debug\netcoreapp2.1\P01_BillsPaymentSystem.Data.pdb
+C:\Users\Vlado\source\repos\Advanced Relations\CommandInterpreter\bin\Debug\netcoreapp2.1\P01_BillsPaymentSystem.Data.Models.pdb
+C:\Users\Vlado\source\repos\Advanced Relations\CommandInterpreter\obj\Debug\netcoreapp2.1\CommandInterpreter.csprojAssemblyReference.cache
+C:\Users\Vlado\source\repos\Advanced Relations\CommandInterpreter\obj\Debug\netcoreapp2.1\CommandInterpreter.csproj.CoreCompileInputs.cache
+C:\Users\Vlado\source\repos\Advanced Relations\CommandInterpreter\obj\Debug\netcoreapp2.1\CommandInterpreter.AssemblyInfoInputs.cache
+C:\Users\Vlado\source\repos\Advanced Relations\CommandInterpreter\obj\Debug\netcoreapp2.1\CommandInterpreter.AssemblyInfo.cs
+C:\Users\Vlado\source\repos\Advanced Relations\CommandInterpreter\obj\Debug\netcoreapp2.1\CommandInterpreter.csproj.CopyComplete
+C:\Users\Vlado\source\repos\Advanced Relations\CommandInterpreter\obj\Debug\netcoreapp2.1\CommandInterpreter.dll
+C:\Users\Vlado\source\repos\Advanced Relations\CommandInterpreter\obj\Debug\netcoreapp2.1\CommandInterpreter.pdb

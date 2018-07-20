@@ -1,0 +1,12 @@
+C:\Users\Vlado\source\repos\Advanced Relations\P01_BillsPaymentSystem.Data\bin\Debug\netstandard2.0\P01_BillsPaymentSystem.Data.Models.dll
+C:\Users\Vlado\source\repos\Advanced Relations\P01_BillsPaymentSystem.Data\obj\Debug\netstandard2.0\P01_BillsPaymentSystem.Data.csprojAssemblyReference.cache
+C:\Users\Vlado\source\repos\Advanced Relations\P01_BillsPaymentSystem.Data\obj\Debug\netstandard2.0\P01_BillsPaymentSystem.Data.csproj.CoreCompileInputs.cache
+C:\Users\Vlado\source\repos\Advanced Relations\P01_BillsPaymentSystem.Data\obj\Debug\netstandard2.0\P01_BillsPaymentSystem.Data.AssemblyInfoInputs.cache
+C:\Users\Vlado\source\repos\Advanced Relations\P01_BillsPaymentSystem.Data\obj\Debug\netstandard2.0\P01_BillsPaymentSystem.Data.AssemblyInfo.cs
+C:\Users\Vlado\source\repos\Advanced Relations\P01_BillsPaymentSystem.Data\bin\Debug\netstandard2.0\P01_BillsPaymentSystem.Data.deps.json
+C:\Users\Vlado\source\repos\Advanced Relations\P01_BillsPaymentSystem.Data\bin\Debug\netstandard2.0\P01_BillsPaymentSystem.Data.dll
+C:\Users\Vlado\source\repos\Advanced Relations\P01_BillsPaymentSystem.Data\bin\Debug\netstandard2.0\P01_BillsPaymentSystem.Data.pdb
+C:\Users\Vlado\source\repos\Advanced Relations\P01_BillsPaymentSystem.Data\bin\Debug\netstandard2.0\P01_BillsPaymentSystem.Data.Models.pdb
+C:\Users\Vlado\source\repos\Advanced Relations\P01_BillsPaymentSystem.Data\obj\Debug\netstandard2.0\P01_BillsPaymentSystem.Data.csproj.CopyComplete
+C:\Users\Vlado\source\repos\Advanced Relations\P01_BillsPaymentSystem.Data\obj\Debug\netstandard2.0\P01_BillsPaymentSystem.Data.dll
+C:\Users\Vlado\source\repos\Advanced Relations\P01_BillsPaymentSystem.Data\obj\Debug\netstandard2.0\P01_BillsPaymentSystem.Data.pdb

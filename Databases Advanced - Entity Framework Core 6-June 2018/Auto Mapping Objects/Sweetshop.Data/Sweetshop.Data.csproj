@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20180724085250_initialise.cs" />
+    <Compile Remove="Migrations\20180724092324_new.cs" />
+    <Compile Remove="Migrations\20180724092500_Initialise.cs" />
+    <Compile Remove="Migrations\20180724094215_Initialise.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="microsoft.entityframeworkcore.sqlserver" Version="2.1.1" />
+    <PackageReference Include="microsoft.entityframeworkcore.tools" Version="2.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Sweetshop.Models\Sweetshop.Models.csproj" />
+  </ItemGroup>
+
+</Project>

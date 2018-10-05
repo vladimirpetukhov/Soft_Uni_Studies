@@ -1,0 +1,12 @@
+D:\C#\GITHUB\Soft_Uni_Studies\ASP.NET Core and MVC Basic\WEB SERVER - ASYNCHRONOUS PROCESSING-Exercise\SIS\SIS.WebServer\obj\Debug\netcoreapp2.1\SIS.WebServer.csprojAssemblyReference.cache
+D:\C#\GITHUB\Soft_Uni_Studies\ASP.NET Core and MVC Basic\WEB SERVER - ASYNCHRONOUS PROCESSING-Exercise\SIS\SIS.WebServer\obj\Debug\netcoreapp2.1\SIS.WebServer.csproj.CoreCompileInputs.cache
+D:\C#\GITHUB\Soft_Uni_Studies\ASP.NET Core and MVC Basic\WEB SERVER - ASYNCHRONOUS PROCESSING-Exercise\SIS\SIS.WebServer\obj\Debug\netcoreapp2.1\SIS.WebServer.AssemblyInfoInputs.cache
+D:\C#\GITHUB\Soft_Uni_Studies\ASP.NET Core and MVC Basic\WEB SERVER - ASYNCHRONOUS PROCESSING-Exercise\SIS\SIS.WebServer\obj\Debug\netcoreapp2.1\SIS.WebServer.AssemblyInfo.cs
+D:\C#\GITHUB\Soft_Uni_Studies\ASP.NET Core and MVC Basic\WEB SERVER - ASYNCHRONOUS PROCESSING-Exercise\SIS\SIS.WebServer\bin\Debug\netcoreapp2.1\SIS.WebServer.deps.json
+D:\C#\GITHUB\Soft_Uni_Studies\ASP.NET Core and MVC Basic\WEB SERVER - ASYNCHRONOUS PROCESSING-Exercise\SIS\SIS.WebServer\bin\Debug\netcoreapp2.1\SIS.WebServer.dll
+D:\C#\GITHUB\Soft_Uni_Studies\ASP.NET Core and MVC Basic\WEB SERVER - ASYNCHRONOUS PROCESSING-Exercise\SIS\SIS.WebServer\bin\Debug\netcoreapp2.1\SIS.WebServer.pdb
+D:\C#\GITHUB\Soft_Uni_Studies\ASP.NET Core and MVC Basic\WEB SERVER - ASYNCHRONOUS PROCESSING-Exercise\SIS\SIS.WebServer\bin\Debug\netcoreapp2.1\SIS.HTTP.dll
+D:\C#\GITHUB\Soft_Uni_Studies\ASP.NET Core and MVC Basic\WEB SERVER - ASYNCHRONOUS PROCESSING-Exercise\SIS\SIS.WebServer\bin\Debug\netcoreapp2.1\SIS.HTTP.pdb
+D:\C#\GITHUB\Soft_Uni_Studies\ASP.NET Core and MVC Basic\WEB SERVER - ASYNCHRONOUS PROCESSING-Exercise\SIS\SIS.WebServer\obj\Debug\netcoreapp2.1\SIS.WebServer.csproj.CopyComplete
+D:\C#\GITHUB\Soft_Uni_Studies\ASP.NET Core and MVC Basic\WEB SERVER - ASYNCHRONOUS PROCESSING-Exercise\SIS\SIS.WebServer\obj\Debug\netcoreapp2.1\SIS.WebServer.dll
+D:\C#\GITHUB\Soft_Uni_Studies\ASP.NET Core and MVC Basic\WEB SERVER - ASYNCHRONOUS PROCESSING-Exercise\SIS\SIS.WebServer\obj\Debug\netcoreapp2.1\SIS.WebServer.pdb

@@ -9,9 +9,10 @@ namespace SIS.WebServer
     using HTTP.Exceptions;
     using HTTP.Requests;
     using HTTP.Responses;
-    //TODO:using HTTP.Sessions;
+    using HTTP.Sessions;
     using Results;
     using Routing;
+    using SIS.HTTP.Cookies;
 
     public class ConnectionHandler
     {
@@ -79,34 +80,34 @@ namespace SIS.WebServer
             await this.client.SendAsync(byteSegments, SocketFlags.None);
         }
 
-        //TODO://private string SetRequestSession(IHttpRequest httpRequest)
-        //{
-        //    string sessionId = null;
+        private string SetRequestSession(IHttpRequest httpRequest)
+        {
+            string sessionId = null;
 
-        //    if (httpRequest.Cookies.ContainsCookie(HttpSessionStorage.SessionCookieKey))
-        //    {
-        //        var cookie = httpRequest.Cookies.GetCookie(HttpSessionStorage.SessionCookieKey);
-        //        sessionId = cookie.Value;
-        //        httpRequest.Session = HttpSessionStorage.GetSession(sessionId);
-        //    }
-        //    else
-        //    {
-        //        sessionId = Guid.NewGuid().ToString();
-        //        httpRequest.Session = HttpSessionStorage.GetSession(sessionId);
-        //    }
+            if (httpRequest.Cookies.ContainsCookie(HttpSessionStorage.SessionCookieKey))
+            {
+                var cookie = httpRequest.Cookies.GetCookie(HttpSessionStorage.SessionCookieKey);
+        sessionId = cookie.Value;
+                httpRequest.Session = HttpSessionStorage.GetSession(sessionId);
+            }
+            else
+            {
+                sessionId = Guid.NewGuid().ToString();
+    httpRequest.Session = HttpSessionStorage.GetSession(sessionId);
+            }
 
-        //    return sessionId;
-        //}
+            return sessionId;
+        }
 
-        //TODO://private void SetResponseSession(IHttpResponse httpResponse, string sessionId)
-        //{
-        //    if (sessionId != null)
-        //    {
-        //        httpResponse
-        //            .AddCookie(new HttpCookie(HttpSessionStorage.SessionCookieKey
-        //                , $"{sessionId}; HttpOnly"));
-        //    }
-        //}
+        private void SetResponseSession(IHttpResponse httpResponse, string sessionId)
+        {
+            if (sessionId != null)
+            {
+                httpResponse
+                    .AddCookie(new HttpCookie(HttpSessionStorage.SessionCookieKey
+                        , $"{sessionId}; HttpOnly"));
+            }
+        }
 
         public async Task ProcessRequestAsync()
         {
@@ -116,13 +117,13 @@ namespace SIS.WebServer
 
                 if (httpRequest != null)
                 {
-                    //TODO:string sessionId = this.SetRequestSession(httpRequest);
+            string sessionId = this.SetRequestSession(httpRequest);
 
-                    var httpResponse = this.HandleRequest(httpRequest);
+            var httpResponse = this.HandleRequest(httpRequest);
 
-                    //TODO:this.SetResponseSession(httpResponse, sessionId);
+            this.SetResponseSession(httpResponse, sessionId);
 
-                    await this.PrepareResponse(httpResponse);
+            await this.PrepareResponse(httpResponse);
                 }
             }
             catch (BadRequestException e)

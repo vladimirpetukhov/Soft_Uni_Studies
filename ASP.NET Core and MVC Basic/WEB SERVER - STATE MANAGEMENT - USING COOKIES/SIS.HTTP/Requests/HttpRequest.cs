@@ -1,14 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using SIS.HTTP.Common;
-using SIS.HTTP.Enums;
-using SIS.HTTP.Exceptions;
-using SIS.HTTP.Extensions;
-using SIS.HTTP.Headers;
-
-namespace SIS.HTTP.Requests
+﻿namespace SIS.HTTP.Requests
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+
+    using Common;
+    using Enums;
+    using Exceptions;
+    using Extensions;
+    using Headers;
+    using Cookies;
+    using Cookies.Contracts;
+    using Sessions;
+    using Sessions.Contracts;
     public class HttpRequest : IHttpRequest
     {
         private const char HttpRequestUrlQuerySeparator = '?';
@@ -30,8 +34,8 @@ namespace SIS.HTTP.Requests
             this.FormData = new Dictionary<string, object>();
             this.QueryData = new Dictionary<string, object>();
             this.Headers = new HttpHeaderCollection();
-            //TODO:this.Cookies = new HttpCookieCollection();
-
+            this.Cookies = new HttpCookieCollection();
+            
             this.ParseRequest(requestString);
         }
 
@@ -46,6 +50,10 @@ namespace SIS.HTTP.Requests
         public IHttpHeaderCollection Headers { get; }
         
         public HttpRequestMethod RequestMethod { get; private set; }
+
+        public IHttpCookieCollection Cookies { get; }
+
+        public IHttpSession Session { get; set; }
         
         private bool IsValidRequestLine(string[] requestLine)
         {
@@ -96,6 +104,34 @@ namespace SIS.HTTP.Requests
             }
         }
 
+        private void ParseCookies()
+        {
+            if (!this.Headers.ContainsHeader(HttpHeader.Cookie))
+            {
+                return;
+            }
+
+            var cookiesLine = this.Headers.GetHeader(HttpHeader.Cookie).Value;
+
+            if (string.IsNullOrEmpty(cookiesLine))
+            {
+                return;
+            }
+
+            var splitedLine = cookiesLine.Split(HttpRequestCookiesSeparator, 2, StringSplitOptions.RemoveEmptyEntries);
+
+            foreach (var splitCookie in splitedLine)
+            {
+                var parts = splitCookie.Split(HttpRequestParameterNameValueSeparator, 2, StringSplitOptions.RemoveEmptyEntries);
+
+                if (parts.Length != 2) continue;
+
+                string key = parts[0];
+                string value = parts[1];
+
+                this.Cookies.Add(new HttpCookie(key, value, false));
+            }
+        }
 
         private void ParseQueryParameters()
         {
@@ -170,7 +206,7 @@ namespace SIS.HTTP.Requests
             this.ParseRequestPath();
 
             this.ParseHeaders(splitRequestContent.Skip(1).ToArray());
-            //TODO:this.ParseCookies();
+            this.ParseCookies();
 
             this.ParseRequestParameters(splitRequestContent[splitRequestContent.Length - 1]);
         }

@@ -1,12 +1,14 @@
-﻿using System.Linq;
-using System.Text;
-using SIS.HTTP.Common;
-using SIS.HTTP.Enums;
-using SIS.HTTP.Extensions;
-using SIS.HTTP.Headers;
-
-namespace SIS.HTTP.Responses
+﻿namespace SIS.HTTP.Responses
 {
+    using System.Linq;
+    using System.Text;
+
+    using Common;
+    using Cookies;
+    using Enums;
+    using Extensions;
+    using Headers;
+    using Cookies.Contracts;
     public class HttpResponse : IHttpResponse
     {
         public HttpResponse() { }
@@ -16,7 +18,7 @@ namespace SIS.HTTP.Responses
             CoreValidator.ThrowIfNull(statusCode, nameof(statusCode));
 
             this.Headers = new HttpHeaderCollection();
-            //TODO:this.Cookies = new HttpCookieCollection();
+            this.Cookies = new HttpCookieCollection();
             this.Content = new byte[0];
             this.StatusCode = statusCode;
         }
@@ -24,6 +26,8 @@ namespace SIS.HTTP.Responses
         public HttpResponseStatusCode StatusCode { get; set; }
 
         public IHttpHeaderCollection Headers { get; }
+
+        public IHttpCookieCollection Cookies { get; }
 
         public byte[] Content { get; set; }
 
@@ -33,11 +37,11 @@ namespace SIS.HTTP.Responses
             this.Headers.Add(header);
         }
 
-        //TODO:public void AddCookie(HttpCookie cookie)
-        //{
-        //    CoreValidator.ThrowIfNull(cookie, nameof(cookie));
-        //    this.Cookies.Add(cookie);
-        //}
+        public void AddCookie(HttpCookie cookie)
+        {
+            CoreValidator.ThrowIfNull(cookie, nameof(cookie));
+            this.Cookies.Add(cookie);
+        }
 
         public byte[] GetBytes()
         {
@@ -52,13 +56,13 @@ namespace SIS.HTTP.Responses
                 .Append($"{GlobalConstants.HttpOneProtocolFragment} {this.StatusCode.GetResponseLine()}").Append(GlobalConstants.HttpNewLine)
                 .Append(this.Headers).Append(GlobalConstants.HttpNewLine);
 
-            //TODO:if (this.Cookies.HasCookies())
-            //{
-            //    foreach (var httpCookie in this.Cookies)
-            //    {
-            //        result.Append($"Set-Cookie: {httpCookie}").Append(GlobalConstants.HttpNewLine);
-            //    }
-            //}
+            if (this.Cookies.HasCookies())
+            {
+                foreach (var httpCookie in this.Cookies)
+                {
+                    result.Append($"Set-Cookie: {httpCookie}").Append(GlobalConstants.HttpNewLine);
+                }
+            }
 
             result.Append(GlobalConstants.HttpNewLine);
 

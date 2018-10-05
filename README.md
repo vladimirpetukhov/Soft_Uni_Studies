@@ -18,4 +18,4 @@
 5. <a href="https://github.com/vladimirpetukhov/Soft_Uni_Studies/tree/master/C%23_Data_Base_MS_SQL"> C#_Data_Base_MS_SQL </a>
 6. <a href="https://github.com/vladimirpetukhov/Soft_Uni_Studies/tree/master/HTML5_CSS"> HTML5_CSS </a>
 7. <a href="https://github.com/vladimirpetukhov/Soft_Uni_Studies/tree/master/Databases%20Advanced%20-%20Entity%20Framework%20Core%206-June%202018">Entity Framework Core 6</a>
-8. <a href="https://github.com/vladimirpetukhov/Soft_Uni_Studies/tree/master/ASP.NET%20Core%20and%20MVC%20Basic/SoftUni%20Beers"> ASP.NET Core and MVC Basic </a>
+8. <a href="https://github.com/vladimirpetukhov/Soft_Uni_Studies/tree/master/ASP.NET%20Core%20and%20MVC%20Basic"> ASP.NET Core and MVC Basic </a>

@@ -1,68 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
+*<p align="center"> SoftUni Training and Exams</p>
+![SoftUni logo][logo] <a/>
 
-<head>
-    <meta charset="UTF-8">
+[logo]: http://innovationstarterbox.bg/wp-content/uploads/2016/05/Softuni_logo_trasparent.png "Logo Title Text 2"
 
-    <link rel="stylesheet" href="template.css">
-    <title>Cards</title>
-    <script src="solution.js"></script>
-</head>
+---
 
-<body>
-    <div id="container">
-        <nav id="navigation">
-            <div id="navigation-text">
-                <p id="lecture-name">Document Object Model</p>
-                <p id="problem-name">1. Cards</p>
-            </div>
-            <img id="logo-img" src="images/kubrat.jpg" alt="">
-        </nav>
-        <main id="main">
-
-            <div id="exercise">
-                <div id="player1Div">
-                    <img src="images/card.jpg" name="2" />
-                    <img src="images/card.jpg" name="15" />
-                    <img src="images/card.jpg" name="4" />
-                    <img src="images/card.jpg" name="12" />
-                    <img src="images/card.jpg" name="6" />
-                    <img src="images/card.jpg" name="10" />
-                    <img src="images/card.jpg" name="8" />
-                    <img src="images/card.jpg" name="9" />
-                </div>
-
-                <div id="result">
-                    <span></span>
-                    <span>vs</span>
-                    <span></span>
-                </div>
-
-                <div id="player2Div">
-                    <img src="images/card.jpg" name="10" />
-                    <img src="images/card.jpg" name="14" />
-                    <img src="images/card.jpg" name="9" />
-                    <img src="images/card.jpg" name="7" />
-                    <img src="images/card.jpg" name="11" />
-                    <img src="images/card.jpg" name="5" />
-                    <img src="images/card.jpg" name="13" />
-                    <img src="images/card.jpg" name="3"/>
-                </div>
-
-                <div id="history">
-
-                </div>
-            </div>
-
-        <img id="softUni-person-img" src="images/wizard.png" alt="softUni-person">
-
-        </main>
+                                                         About:
 
 
-    </div>
-    <script>
-      solve();
-    </script>
-</body>
+      These are the tasks and exam solutions during my training in SoftUni
 
-</html>
+## Exercises.
+1. <a href="https://github.com/vladimirpetukhov/Soft_Uni_Studies/tree/master/C%23Fundamentals"> C#Fundamentals </a> 
+2. <a href="https://github.com/vladimirpetukhov/Soft_Uni_Studies/tree/master/Programing_Fundamentals_C%23"> Programing_Fundamentals_C# </a>
+3. <a href="https://github.com/vladimirpetukhov/Soft_Uni_Studies/tree/master/Programing_Basic_C%2B%2B"> Programing_Basic_C++</a> 
+4. <a href="https://github.com/vladimirpetukhov/Soft_Uni_Studies/tree/master/Programing_Basic_C%23"> Programing_Basic_C# </a> 
+5. <a href="https://github.com/vladimirpetukhov/Soft_Uni_Studies/tree/master/C%23_Data_Base_MS_SQL"> C#_Data_Base_MS_SQL </a>
+6. <a href="https://github.com/vladimirpetukhov/Soft_Uni_Studies/tree/master/HTML5_CSS"> HTML5_CSS </a>
+7. <a href="https://github.com/vladimirpetukhov/Soft_Uni_Studies/tree/master/Databases%20Advanced%20-%20Entity%20Framework%20Core%206-June%202018">Entity Framework Core 6</a>
+8. <a href="https://github.com/vladimirpetukhov/Soft_Uni_Studies/tree/master/ASP.NET%20Core%20and%20MVC%20Basic"> ASP.NET Core and MVC Basic </a>
